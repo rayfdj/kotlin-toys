@@ -40,3 +40,21 @@ application {
     // Define the main class for the application.
     mainClassName = "dev.rayfdj.kotlinutils.springer.DownloadBooksKt"
 }
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = application.mainClassName
+    }
+    from(configurations.runtimeClasspath.get().map {
+        exclude("META-INF/LICENSE")
+        exclude("META-INF/LICENSE.txt")
+        exclude("META-INF/NOTICE")
+        exclude("META-INF/NOTICE.txt")
+
+        if(it.isDirectory) it else zipTree(it)
+    })
+}
+
+tasks.compileKotlin {
+    kotlinOptions.jvmTarget = "11"
+}

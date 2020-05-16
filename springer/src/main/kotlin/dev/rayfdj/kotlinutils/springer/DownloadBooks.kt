@@ -59,7 +59,7 @@ fun downloadAndSaveBook(bookDownloadURL: URL, fullLocalFilePath: Path) {
 
 fun main(args: Array<String>) {
     if(args.size != 2) {
-        println("Please pass <full_path_to_springer_excel_file> and <full_path_to_download_folder")
+        println("Please pass <full_path_to_springer_excel_file> and <full_path_to_download_folder>")
         kotlin.system.exitProcess(-1)
     }
     val (excelFile, downloadFolder) = args
