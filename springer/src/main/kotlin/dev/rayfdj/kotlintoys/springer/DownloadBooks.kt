@@ -1,4 +1,4 @@
-package dev.rayfdj.kotlinutils.springer
+package dev.rayfdj.kotlintoys.springer
 
 import org.apache.poi.ss.usermodel.WorkbookFactory
 import org.jsoup.Jsoup

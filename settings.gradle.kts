@@ -7,6 +7,6 @@
  * in the user manual at https://docs.gradle.org/6.4/userguide/multi_project_builds.html
  */
 
-rootProject.name = "kotlin-utils"
+rootProject.name = "kotlin-toys"
 
 include("springer")
